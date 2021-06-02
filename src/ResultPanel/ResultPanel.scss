@@ -1,0 +1,15 @@
+.result {
+    flex-basis: 100px;
+    padding: 5px;
+    border-bottom: 2px solid rgb(14, 14, 14);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+
+    &__span {
+        text-align: right;
+        font-size: 5rem;
+        flex-basis: 100%;
+    }
+}

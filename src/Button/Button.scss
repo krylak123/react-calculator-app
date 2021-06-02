@@ -1,0 +1,22 @@
+.btn {
+    display: block;
+    font-size: 3.5rem;
+    color: white;
+    background-color: lighten(#123, 1%);
+    outline: none;
+    border: 1px solid rgb(14, 14, 14);
+
+    &--result {
+        grid-area: 4 / -1 / -1 / -2;
+        background-color: lighten(#123, 20%);
+    }
+
+    &--number {
+        background-color: lighten(#123, 5%);
+    }
+
+    &:active {
+        background-color: lighten(#123, 10%);
+    }
+
+}
