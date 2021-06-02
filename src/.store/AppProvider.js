@@ -4,13 +4,13 @@ export const AppContext = createContext(null);
 
 const AppProvider = ({ children }) => {
 
-    const [result, setResult] = useState(0);
+    const [result, setResult] = useState(null);
 
     return (
-        <AppContext.Provider value={
+        <AppContext.Provider value={{
             result,
             setResult
-        }>
+        }}>
             {children}
         </AppContext.Provider>
     );

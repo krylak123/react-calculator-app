@@ -6,8 +6,6 @@ const ResultPanel = () => {
 
     const { result } = useContext(AppContext);
 
-    console.log(result);
-
     return (
         <div className="result">
             <span className="result__span">{result}</span>
