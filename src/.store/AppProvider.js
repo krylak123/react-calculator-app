@@ -4,12 +4,15 @@ export const AppContext = createContext(null);
 
 const AppProvider = ({ children }) => {
 
-    const [result, setResult] = useState(null);
+    const [result, setResult] = useState('');
+    const [isOperend, setIsOperend] = useState(false)
 
     return (
         <AppContext.Provider value={{
             result,
-            setResult
+            setResult,
+            isOperend,
+            setIsOperend
         }}>
             {children}
         </AppContext.Provider>
