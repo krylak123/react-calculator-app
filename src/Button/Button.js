@@ -5,9 +5,10 @@ import './Button.scss';
 
 const Button = ({ char, className, name }) => {
 
-    const { result, setResult, isOperend, setIsOperend } = useContext(AppContext)
+    const { result, setResult, isOperend, setIsOperend, setResultList } = useContext(AppContext)
 
     const handleCalculator = () => {
+
         if (name === "number") {
             setResult(prevValue => prevValue + char)
         } else if (name === "dot") {
@@ -32,11 +33,15 @@ const Button = ({ char, className, name }) => {
             if (temp % 1 === 0) {
                 setResult(temp)
             } else {
-                setResult(temp.toFixed(2))
+                temp = temp.toFixed(2)
+                setResult(temp)
             }
+
+            setResultList(prevValue => [...prevValue, String(temp)])
             setIsOperend(prevValue => !prevValue)
         } catch {
             setResult('error')
+            setTimeout(() => setResult(''), 1000)
         }
     }
 
