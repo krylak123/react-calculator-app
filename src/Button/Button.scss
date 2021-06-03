@@ -2,21 +2,40 @@
     display: block;
     font-size: 3.5rem;
     color: white;
-    background-color: lighten(#123, 1%);
+    background-color: lighten(rgba(17, 34, 51, .5), 1%);
     outline: none;
     border: 1px solid rgb(14, 14, 14);
 
     &--result {
         grid-area: 4 / -1 / -1 / -2;
-        background-color: lighten(#123, 20%);
+        background-color: lighten(rgba(17, 34, 51, .5), 20%);
     }
 
     &--number {
-        background-color: lighten(#123, 5%);
+        background-color: lighten(rgba(17, 34, 51, .5), 5%);
     }
 
     &:active {
-        background-color: lighten(#123, 10%);
+        background-color: lighten(rgba(17, 34, 51, .5), 10%);
     }
 
+    @media (min-width: 760px) {
+        font-size: 5rem;
+    }
+
+    @media (min-width: 800px) and (orientation: landscape) {
+        font-size: 4rem;
+    }
+
+    @media (min-width: 1000px) and (orientation: portrait) {
+        font-size: 8rem;
+    }
+
+    @media (min-width: 1024px) {
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(rgba(17, 34, 51, .5), 5%);
+        }
+    }
 }

@@ -3,13 +3,28 @@
     padding: 5px;
     border-bottom: 2px solid rgb(14, 14, 14);
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     overflow: hidden;
 
     &__span {
         text-align: right;
-        font-size: 5rem;
-        flex-basis: 100%;
+        font-size: 4rem;
+    }
+
+
+    @media (min-width: 375px) and (min-height: 750px) {
+        flex-basis: 150px;
+
+        &__span {
+            font-size: 5rem;
+        }
+    }
+
+    @media (min-width: 760px) {
+
+        &__span {
+            font-size: 6rem;
+        }
     }
 }

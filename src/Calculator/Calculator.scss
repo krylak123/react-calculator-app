@@ -6,4 +6,9 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 1024px) and (orientation: landscape) {
+        width: 600px;
+        height: 80%;
+    }
 }
