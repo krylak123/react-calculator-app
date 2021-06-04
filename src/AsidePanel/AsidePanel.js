@@ -6,20 +6,22 @@ const AsidePanel = () => {
 
     const { resultList } = useContext(AppContext)
 
-    const handleTouchStart = (e) => {
-        e.target.parentNode.classList.toggle('active')
+    const handleTouchStart = () => {
+        document.querySelector('.aside').classList.toggle('active')
     }
 
     useEffect(() => {
         document.querySelector('.aside__swiper').addEventListener('touchstart', handleTouchStart)
+        document.querySelector('.aside__swiper').addEventListener('click', handleTouchStart)
 
         return () => {
             document.querySelector('.aside__swiper').removeEventListener('touchstart', handleTouchStart)
+            document.querySelector('.aside__swiper').removeEventListener('click', handleTouchStart)
         }
     }, [])
 
     const resultListMap = resultList.map(item => (
-        <li className="aside__result">{item}</li>
+        <li className="aside__result">{item.operation} = {item.result}</li>
     ))
 
     return (
