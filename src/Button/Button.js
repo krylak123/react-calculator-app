@@ -25,6 +25,7 @@ const Button = ({ char, className, name }) => {
 
     const showResult = () => {
         let temp = '';
+        let tempResult = result;
 
         try {
             // eslint-disable-next-line
@@ -37,7 +38,7 @@ const Button = ({ char, className, name }) => {
                 setResult(temp)
             }
 
-            setResultList(prevValue => [...prevValue, String(temp)])
+            setResultList(prevValue => [...prevValue, { operation: tempResult, result: String(temp) }])
             setIsOperend(prevValue => !prevValue)
         } catch {
             setResult('error')
