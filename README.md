@@ -1,4 +1,4 @@
-# React Router simple page
+# React Calculator App
 > Available on [GitHub Pages](https://krylak123.github.io/react-calculator-app/)
 
 ## General info
